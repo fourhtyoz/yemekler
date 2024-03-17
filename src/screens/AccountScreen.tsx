@@ -1,9 +1,9 @@
 import React from "react";
 import { Text, View } from "react-native";
 
-export default function AccountScreen() {
+export default function AccountScreen({css}) {
     return (
-        <View>
+        <View style={[css,]}>
             <Text>Account Page</Text>
         </View>
     )

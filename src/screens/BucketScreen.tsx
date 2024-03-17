@@ -1,9 +1,9 @@
 import React from "react";
 import { Text, View } from "react-native";
 
-export default function BucketScreen() {
+export default function BucketScreen({css}) {
     return (
-        <View>
+        <View style={[css,]}>
             <Text>Bucket Page</Text>
         </View>
     )

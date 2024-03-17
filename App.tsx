@@ -44,8 +44,8 @@ export default function App() {
                   name='Home' 
                   options={{tabBarIcon: ({ focused }) => (
                   <Feather 
-                    name={'droplet'} 
-                    size={25} 
+                    name={'home'} 
+                    size={20} 
                     color={focused ? COLORS.TOMATO : 'gray'}
                   />
                   )
@@ -57,7 +57,7 @@ export default function App() {
                   options={{tabBarIcon: ({ focused }) => (
                   <Feather 
                     name={'search'} 
-                    size={25} 
+                    size={20} 
                     color={focused ? COLORS.TOMATO : 'gray'}
                   />
                   )
@@ -69,7 +69,7 @@ export default function App() {
                   options={{tabBarIcon: ({ focused }) => (
                   <Feather 
                     name={'package'} 
-                    size={25} 
+                    size={20} 
                     color={focused ? COLORS.TOMATO : 'gray'}
                   />
                   )
@@ -81,7 +81,7 @@ export default function App() {
                   options={{tabBarIcon: ({ focused }) => (
                   <Feather 
                     name={'help-circle'} 
-                    size={25} 
+                    size={20} 
                     color={focused ? COLORS.TOMATO : 'gray'}
                   />
                   )
@@ -93,7 +93,7 @@ export default function App() {
                   options={{tabBarIcon: ({ focused }) => (
                   <Feather 
                     name={'user'} 
-                    size={25} 
+                    size={20} 
                     color={focused ? COLORS.TOMATO : 'gray'}
                   />
                   )
@@ -112,6 +112,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   screenContainer: {
-    backgroundColor: 'green'
+    padding: 20,
   }
 });
