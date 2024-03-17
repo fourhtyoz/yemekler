@@ -18,6 +18,10 @@ const styles = StyleSheet.create({
         height: 105,
         backgroundColor: 'gray',
         borderRadius: 15,
+        shadowColor: '#171717',
+        shadowOffset: {width: -2, height: 4},
+        shadowOpacity: 0.2,
+        shadowRadius: 3,
     },
     itemText: {
         color: COLORS.WHITE,
@@ -27,7 +31,9 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         alignSelf: 'center',
         position: 'absolute',
-        top: 90 / 2
+        top: 70 / 2,
+        backgroundColor: 'rgba(0, 0, 0, .7)',
+        padding: 5
     },
     imageStyles: {
         height: 105,
