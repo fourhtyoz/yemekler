@@ -3,4 +3,5 @@ export const COLORS = {
     WHITE: '#ffffff',
     BLACK: '#000000',
     NIGHT: '#0A100D',
+    TOMATO: 'tomato',
 }

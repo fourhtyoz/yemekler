@@ -7,8 +7,8 @@ import AccountScreen from './src/screens/AccountScreen';
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Header from './src/components/Header';
-import Ionicons from 'react-native-vector-icons/Ionicons';
 import { COLORS } from './src/constants/colors';
+import { Feather } from '@expo/vector-icons'
 
 
 const Tab = createBottomTabNavigator()
@@ -16,7 +16,7 @@ const Tab = createBottomTabNavigator()
 
 export default function App() {
 
-  const { container } = styles;
+  const { container, screenContainer } = styles;
   return (
     <SafeAreaView style={container}>
       <Header />
@@ -30,24 +30,76 @@ export default function App() {
                   fontSize: 13,
                   justifyContent: 'center',
                   alignItems: 'center',
-                  marginBottom: 15
+                  // marginBottom: 15
                 },
-                tabBarActiveTintColor: 'tomato',
-                tabBarInactiveTintColor: 'white',
+                tabBarActiveTintColor: COLORS.TOMATO,
+                tabBarInactiveTintColor: 'gray',
                 tabBarActiveBackgroundColor: COLORS.NIGHT,
                 tabBarStyle: {
                   backgroundColor: COLORS.NIGHT
                 },
-                tabBarIconStyle: {
-                  display: 'none'
-                }
               }}
               >
-                <Tab.Screen name='Home' component={HomeScreen} />
-                <Tab.Screen name='Search' component={SearchScreen} />
-                <Tab.Screen name='Bucket' component={BucketScreen} />
-                <Tab.Screen name='Help' component={HelpScreen} />
-                <Tab.Screen name='Account' component={AccountScreen} />
+                <Tab.Screen 
+                  name='Home' 
+                  options={{tabBarIcon: ({ focused }) => (
+                  <Feather 
+                    name={'droplet'} 
+                    size={25} 
+                    color={focused ? COLORS.TOMATO : 'gray'}
+                  />
+                  )
+                }}>
+                  {() => <HomeScreen css={screenContainer} />}
+                </Tab.Screen>
+                <Tab.Screen 
+                  name='Search' 
+                  options={{tabBarIcon: ({ focused }) => (
+                  <Feather 
+                    name={'search'} 
+                    size={25} 
+                    color={focused ? COLORS.TOMATO : 'gray'}
+                  />
+                  )
+                }}> 
+                  {() => <SearchScreen css={screenContainer} />}
+                </Tab.Screen>
+                <Tab.Screen 
+                  name='Bucket' 
+                  options={{tabBarIcon: ({ focused }) => (
+                  <Feather 
+                    name={'package'} 
+                    size={25} 
+                    color={focused ? COLORS.TOMATO : 'gray'}
+                  />
+                  )
+                }}> 
+                {() => <BucketScreen css={screenContainer} />}
+                </Tab.Screen>
+                <Tab.Screen 
+                  name='Help' 
+                  options={{tabBarIcon: ({ focused }) => (
+                  <Feather 
+                    name={'help-circle'} 
+                    size={25} 
+                    color={focused ? COLORS.TOMATO : 'gray'}
+                  />
+                  )
+                }}> 
+                {() => <HelpScreen css={screenContainer} />}
+                </Tab.Screen>
+                <Tab.Screen 
+                  name='Account' 
+                  options={{tabBarIcon: ({ focused }) => (
+                  <Feather 
+                    name={'user'} 
+                    size={25} 
+                    color={focused ? COLORS.TOMATO : 'gray'}
+                  />
+                  )
+                }}> 
+                {() => <AccountScreen css={screenContainer} />}
+                </Tab.Screen>
             </Tab.Navigator>
         </NavigationContainer>
     </SafeAreaView>
@@ -58,6 +110,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    
   },
+  screenContainer: {
+    backgroundColor: 'green'
+  }
 });
