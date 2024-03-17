@@ -33,6 +33,8 @@ const styles = StyleSheet.create({
         position: 'absolute',
         top: 70 / 2,
         backgroundColor: 'rgba(0, 0, 0, .7)',
+        width: '100%',
+        textAlign: 'center',
         padding: 5
     },
     imageStyles: {

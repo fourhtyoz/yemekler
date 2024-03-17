@@ -2,7 +2,7 @@ import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import HomeScreen from './src/screens/HomeScreen';
 import SearchScreen from './src/screens/SearchScreen';
 import HelpScreen from './src/screens/HelpScreen';
-import BucketScreen from './src/screens/BucketScreen';
+import CartScreen from './src/screens/CartScreen';
 import AccountScreen from './src/screens/AccountScreen';
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -65,7 +65,7 @@ export default function App() {
                   {() => <SearchScreen css={screenContainer} />}
                 </Tab.Screen>
                 <Tab.Screen 
-                  name='Bucket' 
+                  name='Cart' 
                   options={{tabBarIcon: ({ focused }) => (
                   <Feather 
                     name={'package'} 
@@ -74,7 +74,7 @@ export default function App() {
                   />
                   )
                 }}> 
-                {() => <BucketScreen css={screenContainer} />}
+                {() => <CartScreen css={screenContainer} />}
                 </Tab.Screen>
                 <Tab.Screen 
                   name='Help' 

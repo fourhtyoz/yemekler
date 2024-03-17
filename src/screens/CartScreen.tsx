@@ -1,10 +1,10 @@
 import React from "react";
 import { Text, View } from "react-native";
 
-export default function BucketScreen({css}) {
+export default function CartScreen({css}) {
     return (
         <View style={[css,]}>
-            <Text>Bucket Page</Text>
+            <Text>Cart Page</Text>
         </View>
     )
 }
