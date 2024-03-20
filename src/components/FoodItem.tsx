@@ -2,7 +2,7 @@ import React from "react"
 import { Text, View, StyleSheet, Image } from "react-native"
 import { COLORS } from "../constants/colors";
 
-export default function OptionItem({id, name, image}) {
+export default function FoodItem({id, name, image}) {
     const { item, itemText, imageStyles } = styles;
     return (
         <View style={item}>

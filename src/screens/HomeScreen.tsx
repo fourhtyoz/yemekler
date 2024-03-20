@@ -1,14 +1,45 @@
 import React from "react";
 import { Text, View, ScrollView, StyleSheet } from "react-native";
 import { COLORS } from "../constants/colors";
-import OptionItem from "../components/OptionItem";
+import FoodItem from "../components/FoodItem";
 
 export default function HomeScreen({css}) {
     const { container } = styles;
-    let itemsN = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    const items = [
+        {
+            id: 1,
+            image: '',
+            name: 'Burgers'
+        },
+        {
+            id: 2,
+            image: '',
+            name: 'Pizzas'
+        },
+        {
+            id: 3,
+            image: '',
+            name: 'Desserts'
+        },
+        {
+            id: 4,
+            image: '',
+            name: 'Fruit & Vegies'
+        },
+        {
+            id: 5,
+            image: '',
+            name: 'Türk mutfağı'
+        },
+        {
+            id: 5,
+            image: '',
+            name: 'Breakfast'
+        },
+]
     return (
         <ScrollView contentContainerStyle={[css, container]}>
-            {itemsN.map(item => <OptionItem id={1} image={'adana.jpg'} name={'Food'} />)}
+            {items.map(item => <FoodItem id={item.id} image={'adana.jpg'} name={item.name} />)}
         </ScrollView>
     )
 }
